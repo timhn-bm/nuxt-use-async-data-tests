@@ -1,5 +1,8 @@
 <template>
-  <h1>{ server: true, lazy: false }</h1>
+  <div>
+    <h1>{ server: true, lazy: false } + await</h1>
+  </div>
+
   <div>data = {{ data }}</div>
 
   <div>loading = {{ pending }}</div>
@@ -7,9 +10,10 @@
 
 <script setup lang="ts">
 import { getData } from "~/fetch";
-const { data, pending } = useAsyncData(
-  async () => {
-    return await getData("eager server ");
+
+const { data, pending } = await useAsyncData(
+  () => {
+    return getData("data ");
   },
   { server: true, lazy: false }
 );

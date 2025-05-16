@@ -1,23 +1,23 @@
-
 <template>
-    <div>
-            data = {{  data  }}
-    </div>
+  <h1>{ lazy: true, server: true }</h1>
 
-    <div> loading = {{ pending  }}</div>
+  <div>data = {{ data }}</div>
+
+  <div>loading = {{ pending }}</div>
 </template>
 
 <script setup lang="ts">
-    import { getData } from '~/fetch';
-const { data, pending } = useAsyncData('orders', async () => {
-    const d = await getData("lazy and server")
-    return d
-},  {
+import { getData } from "~/fetch";
+const { data, pending } = useAsyncData(
+  async () => {
+    const d = await getData("lazy and server");
+    return d;
+  },
+  {
     lazy: true,
-    server: true
-})
+    server: true,
+  }
+);
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
