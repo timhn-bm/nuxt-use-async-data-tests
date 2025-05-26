@@ -1,6 +1,6 @@
 ## Nuxt useAsyncData
 
-Hi
+Hi!
 
 I would like to point out what - I believe - are some "missing" from the docs regarding `useAsyncData`
 
