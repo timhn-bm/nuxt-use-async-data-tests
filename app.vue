@@ -17,19 +17,25 @@
 
       <!-- <NuxtLink to="/foo-eager-server">{ lazy: false, }</NuxtLink> -->
       <NuxtLink to="/foo-eager">{ lazy: false, server: false }</NuxtLink>
-      <NuxtLink to="/two-use-async-data">2x useAsyncData</NuxtLink>
-      <NuxtLink to="/two-use-async-data-working"
-        >2x useAsyncData working</NuxtLink
-      >
-      <NuxtLink to="/sequential-useAsyncData">Sequential useAsyncData</NuxtLink>
-      <!-- <NuxtLink to="/foo-eager-await"
+
+      <NuxtLink to="/foo-eager-await"
         >{ server: true, lazy: false } + await</NuxtLink
       >
 
       <NuxtLink to="/foo-lazy">{ lazy: true, server: false }</NuxtLink>
       <NuxtLink to="/foo-lazy-server">{ lazy: true}</NuxtLink>
 
-      <NuxtLink to="/fetch">fetch immediately</NuxtLink> -->
+      <NuxtLink to="/fetch">fetch immediately</NuxtLink>
+
+      <NuxtLink to="/two-use-async-data">2x useAsyncData</NuxtLink>
+      <NuxtLink to="/two-use-async-await-promises"
+        >2x useAsyncData with await promises
+      </NuxtLink>
+      <NuxtLink to="/sequential-useAsyncData">Sequential useAsyncData</NuxtLink>
+
+      <NuxtLink to="two-use-async-data-promise-all"
+        >useAsyncData with Promise.all</NuxtLink
+      >
     </div>
   </div>
 </template>

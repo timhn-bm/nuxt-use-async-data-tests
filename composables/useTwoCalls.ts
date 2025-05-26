@@ -43,3 +43,10 @@ export async function useSequentialAsyncDatas() {
 
   return { data1, data2, pending1, pending2 };
 }
+
+export function useTwoCallsWithPromiseAll() {
+  return Promise.all([
+    useAsyncData(() => getData("first call", 3000)),
+    useAsyncData(() => getData("second call", 5000)),
+  ]);
+}
